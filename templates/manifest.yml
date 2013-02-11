@@ -1,0 +1,19 @@
+--- 
+applications: 
+  .: 
+    instances: 1
+    mem: 64M
+    services: 
+      levsdelight-mysql-6912: 
+        type: mysql
+    name: levsdelight
+    framework: 
+      name: standalone
+      info: 
+        mem: 64M
+        description: Standalone Application
+        exec: 
+    url: levsdelight.aws.af.cm
+    command: start
+    infra: aws
+    runtime: python2
