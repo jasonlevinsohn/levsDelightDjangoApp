@@ -5,7 +5,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('J-Lev', 'jason.levinsohn@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -30,9 +30,9 @@ if 'VCAP_SERVICES' in os.environ:
 else:
     DATABASES = {
         "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": "dev.db",
-            "USER": "",
+            'ENGINE': 'django.db.backends.mysql',
+            "NAME": "levs",
+            "USER": "root",
             "PASSWORD": "",
             "HOST": "",
             "PORT": "",
@@ -140,6 +140,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
+    'levs',
 )
 
 # A sample logging configuration. The only tangible logging
